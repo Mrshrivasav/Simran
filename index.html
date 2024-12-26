@@ -12,6 +12,12 @@
             padding: 0;
             background: linear-gradient(to bottom, #0093E9, #80D0C7); /* Ocean Gradient */
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
         }
         .container {
             max-width: 800px;
@@ -48,6 +54,56 @@
         .btn:hover {
             background-color: #0056b3;
         }
+
+        /* Neon Button Styles */
+        .neon-button {
+            position: relative;
+            display: inline-block;
+            margin: 10px 0;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #000; /* Set text color to black */
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .neon-button:before, .neon-button:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            animation: neon-glow 1.5s linear infinite alternate;
+        }
+        .neon-button:before {
+            left: 10px;
+            animation-delay: 0.3s;
+        }
+        .neon-button:after {
+            right: 10px;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes neon-glow {
+            0% {
+                box-shadow: 0 0 15px 2px #ff00ff, 0 0 20px 5px #ff00ff, 0 0 40px 8px #ff00ff, 0 0 80px 12px #ff00ff;
+            }
+            100% {
+                box-shadow: 0 0 15px 2px #fff, 0 0 20px 5px #fff, 0 0 40px 8px #fff, 0 0 80px 12px #fff;
+            }
+        }
+
+        .neon-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px 5px #ff00ff, 0 0 60px 10px #ff00ff, 0 0 120px 20px #ff00ff;
+        }
     </style>
 </head>
 <body>
@@ -56,7 +112,7 @@
         <section class="intro">
             <img src="4.jpg" alt="Simran's Photo">
             <h1>Hi, I'm Simran</h1>
-            <p>Welcome to my portfolio. i offer nude vedio calls,vedios,pics, sex chat in reasonable prices.</p>
+            <p>Welcome to my portfolio. I offer video calls, pictures, and more at reasonable prices.</p>
         </section>
 
         <!-- Demo Pictures Section -->
@@ -70,11 +126,14 @@
         <!-- Services Section -->
         <section class="services">
             <h2>Services & Pricing</h2>
-            <p>Paid Girl VC: <strong>₹200</strong></p>
-            <p>Pictures: <strong>₹150</strong></p>
-            <p>Special VC: <strong>₹300</strong></p>
-            <p>My Pic Collection + My F#ced Scenes: <strong>₹500 (To acess this drive link contact me and payment first)</strong></p>
+            <p>Paid Girl VC: <strong>₹250</strong></p>
+            <p>Pictures: <strong>₹450</strong></p>
+            <p>Special VC: <strong>₹700</strong></p>
+            <p>My Pic Collection + My F#ced Scenes: <strong>₹500 (To access this drive link contact me and payment first)</strong></p>
             <a href="https://drive.google.com/drive/folders/165rSevexpXfullVq-4Qr2gFYv8K6ZzTB?usp=sharing" class="btn">View Full Collection</a>
+            
+            <!-- DM Me Button -->
+            <a href="https://www.instagram.com/simmran123._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="neon-button">DM Me</a>
         </section>
     </div>
 </body>
